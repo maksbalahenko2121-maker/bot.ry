@@ -1,3 +1,4 @@
+
 import asyncio
 
 import logging
@@ -423,7 +424,8 @@ async def successful_payment_handler(message: types.Message):
             reply_markup=main_keyboard(),
 
             parse_mode="HTML"
-)
+
+        )
 
  
 
@@ -844,7 +846,8 @@ async def process_bet(message: types.Message, state: FSMContext):
     bal = get_balance(user_id)
 
     if bet < 1 or bet > bal:
-await message.answer(f"⚠️ Ставка должна быть от 1 до <b>{bal} ⭐</b>:", reply_markup=cancel_keyboard("main_menu"), parse_mode="HTML")
+
+        await message.answer(f"⚠️ Ставка должна быть от 1 до <b>{bal} ⭐</b>:", reply_markup=cancel_keyboard("main_menu"), parse_mode="HTML")
 
         return
 
@@ -1044,6 +1047,6 @@ async def main():
 
  
 
-if name == "main":
+if __name__ == "__main__":
 
     asyncio.run(main())
