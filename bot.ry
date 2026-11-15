@@ -1,4 +1,3 @@
-
 import asyncio
 
 import logging
@@ -179,17 +178,13 @@ def get_all_users():
 
 def check_win_by_bet(bet: int) -> bool:
 
-    if bet < 50:
+    if bet <= 5:
 
-        chance = 0.35
-
-    elif bet <= 200:
-
-        chance = 0.10
+        chance = 0.40
 
     else:
 
-        chance = 0.03
+        chance = 0.25
 
     return random.random() < chance
 
