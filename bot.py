@@ -50,7 +50,7 @@ logging.basicConfig(level=logging.INFO)
 
  
 
-BOT_TOKEN = "9297074957:AAEURglfdq6H-Cd9pjPWs9mme6pkG3vSLeE"
+BOT_TOKEN = "9059209753:AAFaj8EcKY-I8dvfEqxswjWdyujylqHO4rA"
 
 ADMIN_ID = 6921885296
 
